@@ -21,7 +21,11 @@ return [
 
      'allowed_origins' => [
         'http://localhost:5173',
-        'https://3770zgzr-5173.asse.devtunnels.ms/'
+        'http://localhost:5174',
+        'https://3770zgzr-5173.asse.devtunnels.ms/',
+        'https://travelmurahjogja.id',
+        'https://www.travelmurahjogja.id',
+        'https://livik.travelmurahjogja.id'
     ],
 
     'allowed_origins_patterns' => [],

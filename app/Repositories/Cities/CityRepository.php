@@ -4,6 +4,7 @@ namespace App\Repositories\Cities;
 
 use App\Models\City;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\DB;
 
 class CityRepository
 {
@@ -58,5 +59,20 @@ class CityRepository
         return $city->delete();
     }
 
-
+    public function getCityRating(int $cityId): object
+    {
+        return DB::table('reviews')
+            ->join(
+                'travels',
+                'reviews.travel_id',
+                '=',
+                'travels.id'
+            )
+            ->where('travels.cities_id', $cityId)
+            ->selectRaw('
+                COALESCE(AVG(reviews.rating), 0) as rating,
+                COUNT(reviews.id) as total_reviews
+            ')
+            ->first();
+    }
 }

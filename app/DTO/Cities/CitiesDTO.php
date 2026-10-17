@@ -14,11 +14,14 @@ class CitiesDTO extends BaseDTO
         public string $slug,
         public ?string $description,
         public ?string $image,
+        public float $rating = 0,
+        public int $totalReviews = 0,
     ) {
     }
 
     public static function fromModel(
-        City $city
+        City $city,
+        array $ratingData = []
     ): self {
         return new self(
             id: $city->id,
@@ -28,8 +31,10 @@ class CitiesDTO extends BaseDTO
 
             image: $city->image
                 ? asset(Storage::url($city->image))
-                // ? Storage::url($city->image)
                 : null,
+
+            rating: (float) ($ratingData['rating'] ?? 0),
+            totalReviews: (int) ($ratingData['totalReviews'] ?? 0),
         );
     }
 
@@ -41,6 +46,8 @@ class CitiesDTO extends BaseDTO
             'slug' => $this->slug,
             'description' => $this->description,
             'image' => $this->image,
+            'rating' => $this->rating,
+            'totalReviews' => $this->totalReviews,
         ];
     }
 }

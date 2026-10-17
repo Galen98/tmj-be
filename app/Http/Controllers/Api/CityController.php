@@ -35,20 +35,20 @@ class CityController extends Controller
         ]);
     }
 
-    public function show(
-        string $slug
-    ) {
-        $city =
-            $this->cityService
-                ->findBySlug($slug);
+    public function show(string $slug)
+    {
+        $city = $this->cityService
+            ->findBySlug($slug);
+
+        $ratingData = $this->cityService
+            ->getCityRating($city->id);
 
         return response()->json([
             'success' => true,
-
-            'data' =>
-                CitiesDTO::fromModel(
-                    $city
-                )->toArray(),
+            'data' => CitiesDTO::fromModel(
+                $city,
+                $ratingData
+            )->toArray(),
         ]);
     }
 }

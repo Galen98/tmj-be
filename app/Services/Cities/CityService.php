@@ -16,6 +16,22 @@ class CityService
     ) {
     }
 
+    public function getCityRating(int $cityId): array
+    {
+        $result = $this->cityRepository
+            ->getCityRating($cityId);
+
+        return [
+            'rating' => round(
+                (float) ($result->rating ?? 0),
+                1
+            ),
+            'totalReviews' => (int) (
+                $result->total_reviews ?? 0
+            ),
+        ];
+    }
+
     public function getAll(): Collection
     {
         return $this->cityRepository

@@ -33,6 +33,12 @@ class ParameterGlobalSeeder extends Seeder
                 ),
                 'is_public' => false,
             ],
+
+            [
+                'name' => 'MIN_BOOKING_JAM',
+                'value' => '6',
+                'is_public' => true,
+            ]
         ];
 
         foreach ($parameters as $parameter) {
