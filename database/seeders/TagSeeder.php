@@ -11,6 +11,12 @@ class TagSeeder extends Seeder
     {
         $tags = [
             [
+                'name' => 'Jemputan Bandara',
+                'slug' => 'jemputan-bandara',
+                'icon' => 'faPlaneDeparture',
+                'status' => true,
+            ],
+            [
                 'name' => 'Terlaris',
                 'slug' => 'terlaris',
                 'icon' => 'faCalendarDays',
@@ -41,7 +47,7 @@ class TagSeeder extends Seeder
                 'status' => true,
             ],
             [
-                'name' => 'Paket Wisata Harian',
+                'name' => 'Wisata Harian',
                 'slug' => 'paket-wisata-harian',
                 'icon' => 'faSuitcase',
                 'status' => true,

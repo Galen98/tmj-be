@@ -62,9 +62,9 @@
                 border-bottom:1px solid #eeeeee;
             "
         >
-        
+
             <img
-                    src="https://i.ibb.co.com/XZk8H4Fy/icon.png"
+                    src="{{ asset('images/misc/icon.png') }}"
                     alt="Travel Murah Jogja"
                     width="70"
                     style="
@@ -73,16 +73,6 @@
                         height:auto;
                     "
                 >
-            {{-- <img
-                src="{{ asset('images/misc/icon.png') }}"
-                alt="Travel Murah Jogja"
-                width="70"
-                style="
-                    display:block;
-                    max-width:70px;
-                    height:auto;
-                "
-            > --}}
 
         </td>
 

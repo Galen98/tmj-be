@@ -69,7 +69,7 @@
                     >
 
                         <img
-                            src="https://i.ibb.co.com/XZk8H4Fy/icon.png"
+                            src="{{ asset('images/misc/icon.png') }}"
                             alt="Travel Murah Jogja"
                             width="80"
                             style="

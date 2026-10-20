@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\CorporateRequestController;
 use App\Http\Controllers\Admin\TravelController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\DateAvailabilityController;
+use App\Http\Controllers\Admin\DashboardAnalyticsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -269,6 +270,10 @@ Route::middleware([
                         ->name('destroy');
                 });
 
+                Route::get(
+                    '/dashboard/analytics',
+                    [DashboardAnalyticsController::class, 'index']
+                )->name('dashboard.analytics');
 });
 
 require __DIR__.'/auth.php';

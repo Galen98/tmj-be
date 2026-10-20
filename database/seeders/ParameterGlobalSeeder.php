@@ -38,6 +38,18 @@ class ParameterGlobalSeeder extends Seeder
                 'name' => 'MIN_BOOKING_JAM',
                 'value' => '6',
                 'is_public' => true,
+            ],
+
+            [
+                'name' => 'REMINDER_DAY_BOOKING_ADMIN',
+                'value' => '3',
+                'is_public' => true,
+            ],
+
+            [
+                'name' => 'REMINDER_DAY_BOOKING_CUSTOMER',
+                'value' => '3',
+                'is_public' => true,
             ]
         ];
 

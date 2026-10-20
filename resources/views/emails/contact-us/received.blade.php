@@ -49,7 +49,7 @@
 
             {{-- gunakan logo TMJ kamu --}}
             <img
-                src="https://i.ibb.co.com/XZk8H4Fy/icon.png"
+                src="{{ asset('images/misc/icon.png') }}"
                 alt="Travel Murah Jogja"
                 width="70"
                 style="

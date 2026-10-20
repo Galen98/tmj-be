@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('ip_address', 45)
                 ->nullable();
 
+            $table->bigInteger('travel_id')
+                ->nullable();
+
             $table->string('path', 500);
 
             $table->string('country', 100)

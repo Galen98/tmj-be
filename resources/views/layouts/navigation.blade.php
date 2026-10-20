@@ -48,7 +48,7 @@
 
                 <div class="shrink-0 flex items-center">
 
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('admin.dashboard.analytics') }}">
 
                         <img
                             src="{{ asset('images/misc/icon.png') }}"
@@ -72,8 +72,8 @@
                     <!-- DASHBOARD -->
 
                     <x-nav-link
-                        :href="route('dashboard')"
-                        :active="request()->routeIs('dashboard')"
+                        :href="route('admin.dashboard.analytics')"
+                        :active="request()->routeIs('admin.dashboard.analytics')"
                     >
                         {{ __('Dashboard') }}
                     </x-nav-link>
@@ -999,8 +999,8 @@
         ========================================== -->
 
         <x-responsive-nav-link
-            :href="route('dashboard')"
-            :active="request()->routeIs('dashboard')"
+            :href="route('admin.dashboard.analytics')"
+            :active="request()->routeIs('admin.dashboard.analytics')"
         >
             {{ __('Dashboard') }}
         </x-responsive-nav-link>
